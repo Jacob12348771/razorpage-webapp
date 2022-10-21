@@ -12,9 +12,9 @@ namespace JacobTestWebApp.Pages.Students
 {
     public class CreateModel : PageModel
     {
-        private readonly JacobTestWebApp.Data.ApplicationDbContext _context;
+        private readonly ApplicationDbContext _context;
 
-        public CreateModel(JacobTestWebApp.Data.ApplicationDbContext context)
+        public CreateModel(ApplicationDbContext context)
         {
             _context = context;
         }
@@ -33,7 +33,7 @@ namespace JacobTestWebApp.Pages.Students
         {
             var emptyStudent = new Student();
 
-            if (await TryUpdateModelAsync<Student>(
+            if (await TryUpdateModelAsync(
                 emptyStudent,
                 "student",   // Prefix for form value.
                 s => s.FirstMidName, s => s.LastName, s => s.EnrollmentDate))

@@ -12,9 +12,9 @@ namespace JacobTestWebApp.Pages.Students
 {
     public class DetailsModel : PageModel
     {
-        private readonly JacobTestWebApp.Data.ApplicationDbContext _context;
+        private readonly ApplicationDbContext _context;
 
-        public DetailsModel(JacobTestWebApp.Data.ApplicationDbContext context)
+        public DetailsModel(ApplicationDbContext context)
         {
             _context = context;
         }

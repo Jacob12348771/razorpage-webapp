@@ -1,16 +1,21 @@
-﻿using JacobTestWebApp.Models;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
+using JacobTestWebApp.Data;
+using JacobTestWebApp.Models;
 
 namespace JacobTestWebApp.Pages.Students
 {
     public class DeleteModel : PageModel
     {
-        private readonly Data.ApplicationDbContext _context;
+        private readonly ApplicationDbContext _context;
         private readonly ILogger<DeleteModel> _logger;
 
-        public DeleteModel(Data.ApplicationDbContext context,
+        public DeleteModel(ApplicationDbContext context,
                            ILogger<DeleteModel> logger)
         {
             _context = context;
