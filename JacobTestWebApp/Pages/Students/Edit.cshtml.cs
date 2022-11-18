@@ -38,8 +38,6 @@ namespace JacobTestWebApp.Pages.Students
             return Page();
         }
 
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync(int id)
         {
             var studentToUpdate = await _context.Students.FindAsync(id);
